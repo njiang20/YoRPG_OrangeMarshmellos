@@ -5,3 +5,4 @@ Team Orange Marshmellos: Nina Jiang, Diana Akhmedova, Julia Kozak // Duckies: Mi
   > It will inherit all the attributes and variables in Character.
 * InputStreamReader: this converts byte streams to character streams of a specified charset/something readable, which can be specified by name. It is used to read characters from files where the text is represented by bytes.
 * BufferedReader: this reads a sequence of characters, so it should be used for multiple threads. It's a bit faster when compared to Scanner since it has more memory.
+* IOException: this happens when there is a failed input or output.

@@ -78,7 +78,7 @@ public class Protagonist extends Character {
     public void lowerHP( int damageInflicted ) {
         _hitPts = _hitPts - damageInflicted;
     }
-*/
+
 
     //prepare a Protagonist for a special attack
     public void specialize() {

@@ -7,7 +7,9 @@ public class Archer extends Protagonist{
     attack = .4;
   }
 
-
+  public static String about() {
+    return "A sneaky yet sharp marksman who always hits the mark. It harnesses a sturdy bow and a quiver of arrows, ready to venture out into the most dangerous lands. [Strength increased by 10.]";
+  }
 
   public int attack(Character opponent) {
 

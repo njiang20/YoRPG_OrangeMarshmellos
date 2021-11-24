@@ -12,9 +12,12 @@ public class Archer extends Protagonist{
   }
 
   public int attack(Character opponent) {
-    if (attackState.equals("specialize")) {
+    int skill = (int)(Math.random());
+    if (skill == 0) {
+      specialize();
       int damage = (int)((strength * attack * 2) - opponent.getDefense());
     } else {
+      normalize();
       int damage = (int)((strength * attack) - opponent.getDefense());
     }
     opponent.lowerHP(damage);

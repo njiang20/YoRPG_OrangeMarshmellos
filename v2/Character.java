@@ -6,8 +6,10 @@ public class Character {
   protected double attack;
   protected String attackState;
   protected String name = "";
+  protected int damage;
 
   public Character() {
+    damage = 10;
     health = 125;
     strength = 100;
     defense = 40;

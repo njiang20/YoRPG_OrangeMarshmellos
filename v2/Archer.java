@@ -17,7 +17,7 @@ public class Archer extends Protagonist{
     } else {
       int damage = (strength * attack) - opponent.getDefense();
     }
-    opponent.lowerHP(this.damage);
-    return this.damage;
+    opponent.lowerHP(damage);
+    return damage;
   }
 }

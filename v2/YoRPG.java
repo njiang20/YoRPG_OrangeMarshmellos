@@ -231,3 +231,10 @@ public class YoRPG {
   }//end main
 
 }//end class YoRPG
+
+/*
+OUR DRIVER MODS:
+* We included an if-else statement for character selection so the character has the option to initialize a certain type of protagonist
+* A random int is created to have a random type of monster approach the character
+* We have the option to view an "about" page before a turn starts, which prints the about methods for each type of character
+*/

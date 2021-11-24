@@ -35,19 +35,17 @@ public class Protagonist extends Character{
 
 
     // ~~~~~~~~~~~~~~ ACCESSORS ~~~~~~~~~~~~~~~~~
-    public String getName() { return _name; }
-
+    public String getName() {
+      return _name;
+    }
 
     //prepare a Protagonist for a special attack
     public void specialize() {
-        attack = .75;
-        defense = 20;
+      attackState = "specialize";
     }
 
     //revert to normal mode
     public void normalize() {
-        attack = .4;
-        defense = 40;
+      attackState = "normalize";
     }
-
 }//end class Protagonist

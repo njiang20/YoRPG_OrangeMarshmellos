@@ -8,11 +8,11 @@ public class Character {
 
   public Character( String name ) {
       this();
-      _name = name;
+      name = name;
   }
 
   public String getName() {
-    return _name;
+    return name;
   }
 
   public boolean isAlive() {

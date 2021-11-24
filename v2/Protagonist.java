@@ -29,7 +29,8 @@ public class Protagonist extends Character{
       post: initializes instance vars. _name is set to input String.
       **/
     public Protagonist( String name ) {
-        super(name);
+        super();
+	_name = name;
     }
 
 }//end class Protagonist

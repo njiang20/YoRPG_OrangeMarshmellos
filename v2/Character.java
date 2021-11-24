@@ -6,15 +6,6 @@ public class Character {
   protected double attack;
   protected String attackState;
 
-  public Character( String name ) {
-      this();
-      _name = name;
-  }
-
-  public String getName() {
-    return _name;
-  }
-
   public boolean isAlive() {
      return health > 0;
   }

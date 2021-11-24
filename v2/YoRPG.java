@@ -1,4 +1,5 @@
 /**********************************************
+ *
  * class YoRPG -- Driver file for Ye Olde Role Playing Game.
  * Simulates monster encounters of a wandering adventurer.
  * Required classes: Protagonist, Monster
@@ -10,9 +11,30 @@
  * The only modification you should make to this driver file is moving comment bar down in main method, and filling in DISCO/QCC
  * (If you feel other changes are merited, note what and why, so that we may discuss on the 'morrow.)
  *
+ * Team Orange Marshmellows: Nina Jiang, Diana Akhmedova, Julia Kozak // Duckies: Miss Alpaca, Ajax, Flopsy
+ * APCS pd08
+ * L01 -- An Adventure is You!
+ * 2021-11-23
+ *
+ * Time Spent: 2.5 hours
+ *
  * DISCO:
+ * - If you can solve the problem with a conditional, don't use an exception.
+ * - When catching an exception, be sure to return something runnable in the "safe".
+ * - public class Protagonist extends Character --> this means that Protagonist is a type Character.
+ *     - It will inherit all the attributes and variables in Character.
+ * - InputStreamReader: this converts byte streams to character streams of a specified charset/something readable, which can be specified by name. It is used to read characters from files where the text is represented by bytes.
+ * - BufferedReader: this reads a sequence of characters, so it should be used for multiple threads. It's a bit faster when compared to Scanner since it has more memory.
+ * - IOException: this happens when there is a failed input or output.
  *
  * QCC:
+ * - What do BufferedReader and InputStreamReader do? How are they different from a Scanner?
+ * - Is it preferable to use protected visibility variables, or accessor methods with extension classes? Which one is more efficient?
+ *
+ * OUR DRIVER MODS:
+ * - We included an if-else statement for character selection so the character has the option to initialize a certain type of protagonist.
+ * - A random int is created to have a random type of monster approach the character.
+ * - We have the option to view an "about" page before a turn starts, which prints the about methods for each type of character.
  *
  **********************************************/
 
@@ -231,10 +253,3 @@ public class YoRPG {
   }//end main
 
 }//end class YoRPG
-
-/*
-OUR DRIVER MODS:
-* We included an if-else statement for character selection so the character has the option to initialize a certain type of protagonist
-* A random int is created to have a random type of monster approach the character
-* We have the option to view an "about" page before a turn starts, which prints the about methods for each type of character
-*/

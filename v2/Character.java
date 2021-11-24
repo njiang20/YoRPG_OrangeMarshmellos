@@ -5,9 +5,17 @@ public class Character {
   protected int defense;
   protected double attack;
   protected String attackState;
+  protected String name = "";
 
+  public Character() {
+    health = 125;
+    strength = 100;
+    defense = 40;
+    attack = 0.4;
+    attackState = "normalize";
+  }
 
-  public Character( String name ) {
+  public Character(String name) {
       this();
       name = name;
   }

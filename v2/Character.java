@@ -4,6 +4,7 @@ public class Character {
   protected int strength;
   protected int defense;
   protected double attack;
+  protected String attackState;
 
   public boolean isAlive() {
      return health > 0;

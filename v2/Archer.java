@@ -12,7 +12,13 @@ public class Archer extends Protagonist{
   }
 
   public int attack(Character opponent) {
-      if (attackState.equals("specialize")) {
-        int powerUp = 10;
-        if (powerUp)
-      }
+    super();
+    if (attackState.equals("specialize")) {
+      int damage = (strength * attack * 2) - opponent.getDefense();
+    } else {
+      int damage = (strength * attack) - opponent.getDefense();
+    }
+    opponent.lowerHP(this.damage);
+    return this.damage;
+  }
+}

@@ -29,25 +29,7 @@ public class Protagonist extends Character{
       post: initializes instance vars. _name is set to input String.
       **/
     public Protagonist( String name ) {
-        this();
-        _name = name;
-    }
-
-
-    // ~~~~~~~~~~~~~~ ACCESSORS ~~~~~~~~~~~~~~~~~
-    public String getName() { return _name; }
-
-
-    //prepare a Protagonist for a special attack
-    public void specialize() {
-        attack = .75;
-        defense = 20;
-    }
-
-    //revert to normal mode
-    public void normalize() {
-        attack = .4;
-        defense = 40;
+        super(name);
     }
 
 }//end class Protagonist

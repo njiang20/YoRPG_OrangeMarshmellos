@@ -1,4 +1,3 @@
-Team Orange Marshmellos: Nina Jiang, Diana Akhmedova, Julia Kozak // Duckies: Miss Alpaca, Ajax, Flopsy
 * If you can solve the problem with a conditional, don't use an exception.
 * When catching an exception, be sure to return something runnable in the "safe".
 * public class Protagonist extends Character --> this means that Protagonist is a type Character.

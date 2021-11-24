@@ -14,11 +14,3 @@ public class Archer extends Protagonist{
         int powerUp = 10;
         if (powerUp)
       }
-
-
-
-        }
-      }
-      e.lowerHP(this.damage);
-      return this.damage;
-    }

@@ -13,7 +13,6 @@ public class Character {
     strength = 100;
     defense = 40;
     attack = 0.4;
-    attackState = "normalize";
   }
 
   public Character(String name) {
@@ -59,14 +58,14 @@ public class Character {
   }
 
   public void specialize() {
-      _attack = .75;
-      _defense = 20;
+      attack = .75;
+      defense = 20;
   }
 
   //revert to normal mode
   public void normalize() {
-      _attack = .4;
-      _defense = 40;
+      attack = .4;
+      defense = 40;
   }
 
 }

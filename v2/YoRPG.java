@@ -33,6 +33,8 @@ public class YoRPG {
   private int moveCount;
   private boolean gameOver;
   private int difficulty;
+  private int charSelect;
+  private String choice;
 
   private InputStreamReader isr;
   private BufferedReader in;
@@ -76,16 +78,52 @@ public class YoRPG {
     }
     catch ( IOException e ) { }
 
-    s = "Intrepid protagonist, what doth thy call thyself? (State your name): ";
+    s = "\nChoose your character:\n";
+    s += "\t1: Swordsman\n\t2: Archer\n\t3: Wizard\n";
+    s += "Selection: ";
     System.out.print( s );
 
     try {
-	    name = in.readLine();
+	    charSelect = Integer.parseInt( in.readLine() );
     }
     catch ( IOException e ) { }
 
+    s = "\nIntrepid protagonist, what doth thy call thyself? (State your name): ";
+    System.out.print( s );
+
+    try {
+            name = in.readLine();
+    }
+    catch ( IOException e ) { }
+
+    s = "\nWould thou likest to view the treasured abouteth scripture? (Y/N)\n";
+    s += "Selection: ";
+    System.out.print( s );
+
+    try {
+	    choice = in.readLine();
+    }
+    catch ( IOException e ) { }
+
+    if( choice.equals("Y") ) {
+      System.out.println(Swordsman.about());
+      System.out.println(Archer.about());
+      System.out.println(Wizard.about());
+      System.out.println(Slime.about());
+      System.out.println(Goblin.about());
+      System.out.println(Dragon.about());
+    }
+
     //instantiate the player's character
-    pat = new Protagonist( name );
+    if ( charSelect == 1 ) {
+      pat = new Swordsman( name );
+    }
+    else if ( charSelect == 2 ) {
+      pat = new Archer( name );
+    }
+    else {
+      pat = new Wizard( name );
+    }
 
   }//end newGame()
 
@@ -97,6 +135,7 @@ public class YoRPG {
     Returns false if monster wins (player dies).
     =============================================*/
   public boolean playTurn() {
+
     int i = 1;
     int d1, d2;
 
@@ -105,7 +144,19 @@ public class YoRPG {
     else {
 	    System.out.println( "\nLo, yonder monster approacheth!" );
 
-	    smaug = new Monster();
+	    int monsterSelect = (int)(Math.random() * 3);
+	    if( monsterSelect == 1 ) {
+	        smaug = new Slime();
+		System.out.println( "Halt! A smile hath approcheth you!" );
+	    }
+	    else if( monsterSelect == 2 ) {
+		smaug = new Goblin();
+                System.out.println( "Beware! A goblin spotted thou in the bushes!" );
+	    }
+	    else {
+		smaug = new Dragon();
+                System.out.println( "Uh oh... a dragon?! Good luck, traveler, thou will need it..." );
+	    }
 
 	    while( smaug.isAlive() && pat.isAlive() ) {
 

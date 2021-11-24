@@ -9,7 +9,7 @@ public class Slime extends Monster {
         }
 
         public static String about() {
-                return "A cute, transparent blob of slime that follows other entities around. Be careful though...if you feed them too much, they might grow even bigger than you! [Health: 70, Strength: 5, Defense: 10, Attack: 0.5]";
+                return "\nSlime:\nA cute, transparent blob of slime that follows other entities around. Be careful though...if you feed them too much, they might grow even bigger than you! [Health: 70, Strength: 5, Defense: 10, Attack: 0.5]\n";
         }
 
 }

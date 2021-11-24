@@ -9,7 +9,7 @@ public class Goblin extends Monster {
         }
 
         public static String about() {
-                return "A feisty creature that seems to always be irritated about something. Don't come too close or you might find a club in your face! [Health: 100, Strength: 10, Defense: 15, Attack: 0.7]";
+                return "\nGoblin:\nA feisty creature that seems to always be irritated about something. Don't come too close or you might find a club in your face! [Health: 100, Strength: 10, Defense: 15, Attack: 0.7]\n";
         }
 
 }

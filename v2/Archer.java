@@ -1,16 +1,13 @@
 public class Archer extends Protagonist{
-  public Archer() {
-    super();
-    health = 125;
+  public Archer( String name ) {
+    super( name );
     strength = 110;
-    defense = 40;
-    attack = .4;
   }
 
   public static String about() {
-    return "A sneaky yet sharp marksman who always hits the mark. It harnesses a sturdy bow and a quiver of arrows, ready to venture out into the most dangerous lands. [Strength increased by 10.]";
+    return "\nArcher:\nA sneaky yet sharp marksman who always hits the mark. It harnesses a sturdy bow and a quiver of arrows, ready to venture out into the most dangerous lands. [Strength increased by 10.]\n";
   }
-
+/*
   public int attack(Character opponent) {
     int skill = (int)(Math.random());
     if (skill == 0) {
@@ -22,5 +19,7 @@ public class Archer extends Protagonist{
     }
     opponent.lowerHP(damage);
     return damage;
+
   }
+*/
 }

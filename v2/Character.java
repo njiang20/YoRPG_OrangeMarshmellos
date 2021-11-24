@@ -6,6 +6,14 @@ public class Character {
   protected double attack;
   protected String attackState;
 
+  public Character() {
+    health = 125;
+    strength = 100;
+    defense = 40;
+    attack = 0.4;
+    attackState = "normalize";
+  }
+
   public Character( String name ) {
       this();
       name = name;

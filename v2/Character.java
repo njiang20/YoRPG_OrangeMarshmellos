@@ -6,6 +6,15 @@ public class Character {
   protected double attack;
   protected String attackState;
 
+  public Character( String name ) {
+      this();
+      _name = name;
+  }
+
+  public String getName() {
+    return _name;
+  }
+
   public boolean isAlive() {
      return health > 0;
   }
@@ -37,6 +46,14 @@ public class Character {
 
   public void lowerHP( int damageInflicted ) {
       health = health - damageInflicted;
+  }
+
+  public void specialize() {
+    attackState = "specialize";
+  }
+
+  public void normalize() {
+    attackState = "normalize";
   }
 
 }

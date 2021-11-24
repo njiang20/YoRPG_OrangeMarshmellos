@@ -4,7 +4,6 @@ public class Character {
   protected int strength;
   protected int defense;
   protected double attack;
-  protected String attackState;
   protected String name = "";
   protected int damage;
 
@@ -60,11 +59,14 @@ public class Character {
   }
 
   public void specialize() {
-    attackState = "specialize";
+      _attack = .75;
+      _defense = 20;
   }
 
+  //revert to normal mode
   public void normalize() {
-    attackState = "normalize";
+      _attack = .4;
+      _defense = 40;
   }
 
 }
